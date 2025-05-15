@@ -34,7 +34,7 @@ async fn play(ctx: Context<'_>, #[description = "What hunter comes here:"] name:
     "sword" =>  format!("Good choice {}! You are a noble knight. As you admire your new sword, but you notice a dark shadow glint in the reflection of the blade. Type /ghost to continue your story.", &current_name),
     "hammer" => format!("Very practical, {}. Your father must have been a peasant. The narrator appears, you already hate him. Type /kill to continue your story.", &current_name),
     "horse" => format! ("The horse is not as effective as you thought {}, you lose control of your horse and run into a river, under a nearby bridge is a goblin. Type /goblin to continue your story.", &current_name),
-    _ => format! ("{}, You ask the king for a weapon he does not have, and he declares you a traitor. If you choose to run away, type /Cat to continue your story. If you ask for forgiveness, type /play again to try again.", &current_name),
+    _ => format! ("{}, You ask the king for a weapon he does not have, and he declares you a traitor. You ask for forgiveness. Type /play again to try again.", &current_name),
    };
     ctx.say(response).await?;
 
